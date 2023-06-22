@@ -1,0 +1,20 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. Program7.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 WS-NUM PIC 9(2) VALUE 0.
+
+PROCEDURE DIVISION.
+MAIN-PARAGRAPH.
+    DISPLAY "Enter a number (1 to 10): ".
+    ACCEPT WS-NUM.
+    EVALUATE TRUE
+    WHEN WS-NUM < 1 OR WS-NUM > 10
+        DISPLAY "Invalid number. Must be between 1 and 10."
+    OTHER
+        DISPLAY "Valid number: " WS-NUM
+    END-EVALUATE.
+
+    STOP RUN.
+
